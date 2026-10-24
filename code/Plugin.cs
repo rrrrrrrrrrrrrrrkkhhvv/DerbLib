@@ -29,7 +29,7 @@ namespace DerbLib
     {
         public const string ModGUID = "com.derb.derbLib";
         public const string ModName = "Derb Lib";
-        public const string ModVersion = "1.0.0";
+        public const string ModVersion = "1.0.1";
 
         internal static new ManualLogSource Logger;
         private readonly Harmony _harmony = new(ModGUID);

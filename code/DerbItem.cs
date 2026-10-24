@@ -32,7 +32,7 @@ namespace DerbItemLib
         public Action<Limb, Item> OnLimbUse;
         public Action<Item> OnMade;
 
-        public static DerbItemDef MakeFromItemInfo(ItemInfo itemInfo, string ID)
+        public static DerbItemDef MakeFromItemInfo(ItemInfo itemInfo, string ID, Sprite icon)
         {
             var Def = new DerbItemDef();
             Def.targetItem = ID;
@@ -49,6 +49,7 @@ namespace DerbItemLib
             }
             itemInfo.useLimbAction = Def.OnLimbUseFunc;
 
+            ItemRegistry.Register(ID, itemInfo, icon);
             Defs.Add(Def);
             return Def;
         }
